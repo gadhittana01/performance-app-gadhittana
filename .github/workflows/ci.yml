@@ -100,7 +100,7 @@ jobs:
       run: npm test
       
     - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@master
+      uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
