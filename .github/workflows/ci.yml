@@ -99,11 +99,11 @@ jobs:
     - name: Run tests for coverage
       run: npm test
       
-    - name: SonarQube Scan
-      uses: SonarSource/sonarqube-scan-action@v4.0.0
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
       env:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
 
   k6-smoke-test:
     name: k6 Smoke Test
